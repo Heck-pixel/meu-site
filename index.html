@@ -9,23 +9,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #fff;
             color: #333;
         }
         header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            background-color: #ff6600;
+            background-color: #ff8c00; /* Laranja mais suave */
             padding: 10px 20px;
             color: #fff;
         }
         .logo {
             height: 50px;
             margin-right: 20px;
+            cursor: pointer;
         }
         .navbar {
             display: flex;
-            flex-grow: 1;
         }
         .navbar a {
             color: #fff;
@@ -34,7 +35,7 @@
             text-align: center;
         }
         .navbar a:hover {
-            background-color: #ff4500;
+            background-color: #ff7f50; /* Tom mais escuro de laranja para hover */
         }
         .search-bar {
             margin: 20px auto;
@@ -45,12 +46,12 @@
         .search-bar input {
             width: 80%;
             padding: 10px;
-            border: 1px solid #ff6600;
+            border: 1px solid #ff8c00; /* Laranja mais suave */
             border-radius: 5px 0 0 5px;
         }
         .search-bar button {
             padding: 10px;
-            background-color: #ff6600;
+            background-color: #ff8c00; /* Laranja mais suave */
             border: none;
             color: white;
             cursor: pointer;
@@ -63,7 +64,7 @@
             margin-bottom: 40px;
         }
         .section h2 {
-            color: #ff6600;
+            color: #ff8c00; /* Laranja mais suave */
         }
         .books-grid {
             display: grid;
@@ -89,12 +90,18 @@
 </head>
 <body>
     <header>
-        <img src="imagens/logo.png" alt="Logo" class="logo">
-        <h1>Biblioteca Online</h1>
+        <div class="left-section">
+            <a href="index.html">
+                <img src="imagens/logo.png" alt="Logo" class="logo">
+            </a>
+            <h1>Biblioteca Online</h1>
+        </div>
         <div class="navbar">
+            <a href="index.html">Página Inicial</a>
             <a href="#populares">Populares</a>
-            <a href="#recomendacoes">Recomendações</a>
             <a href="#mais-baixados">Mais Baixados</a>
+            <a href="https://drive.google.com/drive/folders/1ERPZj6wnqlPnjrLEs65PqHrhh0dXevsD?usp=drive_link" target="_blank">Google Drive</a>
+            <a href="#sugestoes">Sugestões de Livros</a>
         </div>
     </header>
     <div class="search-bar">
@@ -119,23 +126,6 @@
                 <!-- Adicione mais livros conforme necessário -->
             </div>
         </div>
-        <div id="recomendacoes" class="section">
-            <h2>Recomendações</h2>
-            <div class="books-grid">
-                <!-- Exemplos de recomendações -->
-                <div class="book">
-                    <img src="imagens/livro3.jpg" alt="Livro 3">
-                    <p>Título do Livro 3</p>
-                    <a href="pdfs/livro3.pdf" download>Baixar PDF</a>
-                </div>
-                <div class="book">
-                    <img src="imagens/livro4.jpg" alt="Livro 4">
-                    <p>Título do Livro 4</p>
-                    <a href="pdfs/livro4.pdf" download>Baixar PDF</a>
-                </div>
-                <!-- Adicione mais livros conforme necessário -->
-            </div>
-        </div>
         <div id="mais-baixados" class="section">
             <h2>Mais Baixados</h2>
             <div class="books-grid">
@@ -149,6 +139,23 @@
                     <img src="imagens/livro6.jpg" alt="Livro 6">
                     <p>Título do Livro 6</p>
                     <a href="pdfs/livro6.pdf" download>Baixar PDF</a>
+                </div>
+                <!-- Adicione mais livros conforme necessário -->
+            </div>
+        </div>
+        <div id="sugestoes" class="section">
+            <h2>Sugestões de Livros</h2>
+            <div class="books-grid">
+                <!-- Exemplos de sugestões de livros -->
+                <div class="book">
+                    <img src="imagens/livro7.jpg" alt="Livro 7">
+                    <p>Título do Livro 7</p>
+                    <a href="pdfs/livro7.pdf" download>Baixar PDF</a>
+                </div>
+                <div class="book">
+                    <img src="imagens/livro8.jpg" alt="Livro 8">
+                    <p>Título do Livro 8</p>
+                    <a href="pdfs/livro8.pdf" download>Baixar PDF</a>
                 </div>
                 <!-- Adicione mais livros conforme necessário -->
             </div>

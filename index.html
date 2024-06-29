@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Gratuito de Livros PDF</title>
+    <title>Biblioteca Online</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +17,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #ff8c00; /* Laranja mais suave */
+            background: linear-gradient(45deg, #ff9a76, #ff6f61); /* Gradiente suave */
             padding: 10px 20px;
             color: #fff;
         }
@@ -35,7 +36,25 @@
             text-align: center;
         }
         .navbar a:hover {
-            background-color: #ff7f50; /* Tom mais escuro de laranja para hover */
+            background-color: #ff6f61; /* Vermelho fraco para hover */
+        }
+        .navbar.responsive {
+            display: block;
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+            background: linear-gradient(45deg, #ff9a76, #ff6f61);
+        }
+        .navbar.responsive a {
+            display: block;
+            text-align: left;
+            padding: 14px 20px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
         }
         .search-bar {
             margin: 20px auto;
@@ -46,12 +65,12 @@
         .search-bar input {
             width: 80%;
             padding: 10px;
-            border: 1px solid #ff8c00; /* Laranja mais suave */
+            border: 1px solid #ff6f61; /* Laranja suave */
             border-radius: 5px 0 0 5px;
         }
         .search-bar button {
             padding: 10px;
-            background-color: #ff8c00; /* Laranja mais suave */
+            background-color: #ff6f61; /* Laranja suave */
             border: none;
             color: white;
             cursor: pointer;
@@ -64,7 +83,7 @@
             margin-bottom: 40px;
         }
         .section h2 {
-            color: #ff8c00; /* Laranja mais suave */
+            color: #ff6f61; /* Laranja suave */
         }
         .books-grid {
             display: grid;
@@ -86,6 +105,14 @@
             text-align: center;
             padding: 10px 0;
         }
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,13 +123,14 @@
             </a>
             <h1>Biblioteca Online</h1>
         </div>
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <a href="index.html">Página Inicial</a>
             <a href="#populares">Populares</a>
             <a href="#mais-baixados">Mais Baixados</a>
             <a href="https://drive.google.com/drive/folders/1ERPZj6wnqlPnjrLEs65PqHrhh0dXevsD?usp=drive_link" target="_blank">Google Drive</a>
             <a href="#sugestoes">Sugestões de Livros</a>
         </div>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
     </header>
     <div class="search-bar">
         <input type="text" placeholder="Pesquise por um livro...">
@@ -164,5 +192,16 @@
     <footer>
         <p>&copy; 2024 Biblioteca Online. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+            } else {
+                navbar.className = "navbar";
+            }
+        }
+    </script>
 </body>
 </html>
